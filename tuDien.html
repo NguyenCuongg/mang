@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Từ Điển</h2>
+    <form>
+        <input type="tel" name="search" placeholder="nhập từ cần tìm" id="timkiem">
+        <input type="button" id="submit" value="Tìm" onclick="layso()">
+        <p id="demo"></p>
+    </form>
+    <script>
+        function layso() {
+            let value = document.getElementById("timkiem").value;
+            // let vl = value.toString();
+            let A = ["xin chào", "tạm biệt"];
+            let B = ["hello", "bye"];
+            let result = "";
+            for (let i = 0; i < B.length; i++) {
+                if (value === B[i]) {
+                    // B[i] = A[i];
+                    result = A[i];
+                    break;
+                }
+            }
+            if (result != "") {
+                document.getElementById("demo").innerHTML = result;
+            }
+            else {
+                document.getElementById("demo").innerHTML = "khong co";
+                // document.write("k co");
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
